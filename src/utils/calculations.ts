@@ -8,16 +8,22 @@ export const calculateTax = (values: TaxInput): TaxInput => {
   result['cas-507'] = Math.min(0.20 * (values['cas-107'] || 0), 100800);
 
   // CAS-508
+  console.log('cas-508');
+  console.log(values['cas-107'] );
+  console.log(result['cas-507']);
   result['cas-508'] = (values['cas-107'] || 0) - (result['cas-507'] || 0);
 
   // CAS-509
   result['cas-509'] = (result['cas-508'] || 0) + (values['cas-108'] || 0);
 
+  // CAS-510
+  result['cas-510'] = result['cas-509'] + (values['cas-111'] || 0);
+
   // CAS-511
-  result['cas-511'] = Math.min(values['cas-510'] || 0, 7 * UIT_VALUE);
+  result['cas-511'] = Math.min(result['cas-510'] || 0 , 7 * UIT_VALUE);
 
   // CAS-ABC
-  const deductionsSum = 
+  const deductionsSum =
     (values['cas-A'] || 0) * 0.3 +
     (values['cas-B'] || 0) * 0.15 +
     (values['cas-C'] || 0) * 0.3 +
@@ -25,7 +31,7 @@ export const calculateTax = (values: TaxInput): TaxInput => {
   result['cas-ABC'] = Math.min(deductionsSum, 3 * UIT_VALUE);
 
   // CAS-512
-  result['cas-512'] = (values['cas-510'] || 0) - (result['cas-511'] || 0) - (result['cas-ABC'] || 0);
+  result['cas-512'] = (result['cas-510'] || 0) - (result['cas-511'] || 0) - (result['cas-ABC'] || 0);
 
   // CAS-519
   result['cas-519'] = Math.min(0.10 * (result['cas-512'] || 0), values['cas-MD'] || 0);

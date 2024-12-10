@@ -46,7 +46,7 @@ export const taxFields: TaxField[] = [
   {
     id: 'cas-510',
     label: 'Total rentas de cuarta y quinta categoría (Cas. 509 + Cas. 111)',
-    readonly: false,
+    readonly: true,
     explanation: 'Cas 509 + Cas 111',
     idLabel: '510'
   },
@@ -54,7 +54,7 @@ export const taxFields: TaxField[] = [
     id: 'cas-511',
     label: 'Deducción de 7 UIT (Hasta el límite resultante de la Cas. 510)',
     readonly: true,
-    explanation: 'test',
+    explanation: '',
     idLabel: '511'
   },
   {
