@@ -110,7 +110,7 @@ export const taxFields: TaxField[] = [
     id: 'cas-MD',
     label: 'MONTO DE DONACIONES',
     readonly: false,
-    explanation: 'test',
+    explanation: '',
     idLabel: 'MD'
   },
   {
@@ -131,7 +131,7 @@ export const taxFields: TaxField[] = [
     id: 'cas-116',
     label: 'Renta Neta de Fuente Extranjera',
     readonly: false,
-    explanation: 'test',
+    explanation: '',
     idLabel: '116'
   },
   {
@@ -152,7 +152,7 @@ export const taxFields: TaxField[] = [
     id: 'cas-IPE',
     label: 'IMPUESTO PAGADO EN EL EXTERIOR',
     readonly: false,
-    explanation: 'test',
+    explanation: '',
     idLabel: 'IPE'
   },
   {
@@ -180,14 +180,14 @@ export const taxFields: TaxField[] = [
     id: 'cas-564',
     label: 'Saldo a favor del ejercicio 2023 aplicado en el ejercicio 2024',
     readonly: false,
-    explanation: 'test',
+    explanation: '',
     idLabel: '564'
   },
   {
     id: 'cas-565',
     label: 'Saldo a favor del ejercicio 2023 aplicado en el ejercicio 2025',
     readonly: false,
-    explanation: 'test',
+    explanation: '',
     idLabel: '565'
   },
   {
