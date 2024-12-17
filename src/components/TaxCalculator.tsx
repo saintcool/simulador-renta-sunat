@@ -36,12 +36,18 @@ export function TaxCalculator() {
           Simulador de renta de cuarta y quinta categoría SUNAT - 2024
         </h1>
 
-        <div className="mb-8">
+        {/* <div className="mb-8">
           <Badge variant="outline" className="text-lg py-2 px-4 bg-white/10 text-white border-white/20">
             UIT: S/ {UIT_VALUE.toLocaleString('es-PE', { minimumFractionDigits: 2 })}
           </Badge>
+        </div> */}
+
+        <div className="mb-8">
+          <Badge variant="outline" className="text-lg py-2 px-4 bg-white text-black border-white/20">
+            UIT: S/ {UIT_VALUE.toLocaleString('es-PE', { minimumFractionDigits: 2 })}
+          </Badge>
         </div>
-        
+
         <div className="space-y-4">
           {taxFields.map((field) => (
             <TaxField

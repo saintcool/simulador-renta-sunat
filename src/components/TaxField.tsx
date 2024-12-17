@@ -27,11 +27,11 @@ export function TaxField({ field, value, onChange }: TaxFieldProps) {
               <TooltipTrigger asChild>
                 <div className="flex items-center bg-blue-100 rounded-md h-10 w-[120px] px-2 cursor-pointer hover:bg-blue-200 transition-colors">
                   {field.explanation.length > 0 ? (
-                    <InfoIcon className="h-4 w-4 text-blue-600 mr-1 shrink-0" />
+                    <InfoIcon className="h-4 w-4 text-black mr-1 shrink-0" />
                   ) : (
                     <div className="h-4 w-4 mr-1"></div>
                   )}
-                  <span className="text-sm text-blue-900 whitespace-nowrap">
+                  <span className="text-sm text-black whitespace-nowrap">
                     Cas. {field.idLabel} :
                   </span>
                 </div>
@@ -50,7 +50,7 @@ export function TaxField({ field, value, onChange }: TaxFieldProps) {
             readOnly={field.readonly}
             className={`text-right w-48 h-10 ${
               field.readonly
-                ? "bg-gray-500 text-gray-900 cursor-not-allowed border-gray-600"
+                ? "bg-gray-300 text-gray-900 cursor-not-allowed border-gray-600"
                 : "bg-white text-gray-900 border-gray-300 hover:border-gray-400 focus:border-blue-500 focus:ring-blue-500"
             }`}
             step="0.01"

@@ -1,7 +1,13 @@
 import { TaxCalculator } from './components/TaxCalculator';
+import Footer from './components/ui/Footer.tsx';
 
 function App() {
-  return <TaxCalculator />;
+  return (
+    <div className="min-h-screen flex flex-col">
+      <TaxCalculator />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
