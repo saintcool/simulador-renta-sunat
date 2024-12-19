@@ -5,7 +5,7 @@ export const calculateTax = (values: TaxInput): TaxInput => {
   const result: TaxInput = { ...values };
 
   // CAS-507
-  result['cas-507'] = Math.min(0.20 * (values['cas-107'] || 0), 100800);
+  result['cas-507'] = Math.min(0.20 * (values['cas-107'] || 0), 24 * UIT_VALUE);
 
   // CAS-508
   console.log('cas-508');

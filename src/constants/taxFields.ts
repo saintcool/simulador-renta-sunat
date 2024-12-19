@@ -10,9 +10,9 @@ export const taxFields: TaxField[] = [
   },
   {
     id: 'cas-507',
-    label: 'Deducción (20% del monto consignado en la Cas. 107 - Máximo S/ 100,800)',
+    label: 'Deducción (20% del monto consignado en la Cas. 107 - Máximo 24 UITs)',
     readonly: true,
-    explanation: '20% de la Cas 107 hasta un máximo de 100,800 (24 UITs)',
+    explanation: '20% de la Cas 107 hasta un máximo de 24 UITs',
     idLabel: '507'
   },
   {

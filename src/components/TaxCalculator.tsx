@@ -36,7 +36,7 @@ export function TaxCalculator() {
           Simulador de renta de cuarta y quinta categoría - 2024
         </h1>
         <div className="mb-8">
-          <Badge variant="outline" className="text-lg py-2 px-4 bg-white text-black border-white/20">
+          <Badge variant="outline" className="text-md py-2 px-4 bg-white text-black border-white/20">
             UIT: S/ {UIT_VALUE.toLocaleString('es-PE', { minimumFractionDigits: 2 })}
           </Badge>
         </div>

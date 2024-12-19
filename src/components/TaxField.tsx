@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/tooltip";
 import { InfoIcon } from "lucide-react";
 import { TaxField as TaxFieldType } from "../types/tax";
-
+import { NumericFormat } from "react-number-format";
 interface TaxFieldProps {
   field: TaxFieldType;
   value: string;
@@ -42,17 +42,23 @@ export function TaxField({ field, value, onChange }: TaxFieldProps) {
             </Tooltip>
           </TooltipProvider>
 
-          <Input
-            id={field.id}
-            type="number"
+          <NumericFormat
             value={value}
-            onChange={(e) => onChange(field.id, e.target.value)}
-            readOnly={field.readonly}
+            customInput={Input}
+            prefix="S/ "
+            thousandSeparator=","
+            decimalSeparator="."
+            decimalScale={2}
+            fixedDecimalScale={true}
             className={`text-right w-48 h-10 ${
               field.readonly
                 ? "bg-gray-300 text-gray-900 cursor-not-allowed border-gray-600"
                 : "bg-white text-gray-900 border-gray-300 hover:border-gray-400 focus:border-blue-500 focus:ring-blue-500"
             }`}
+            onValueChange={(e) => {
+              onChange(field.id, e.value);
+            }}
+            readOnly={field.readonly}
             step="0.01"
             min="0"
           />
